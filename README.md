@@ -1,7 +1,6 @@
 # property_management
 
-![Alt text](../assests/about.png) ![Alt text](../assests/home.png) ![Alt text](../assests/listing.png) ![Alt text](../assests/Oauth.png) ![Alt text](../assests/signIn.png) ![Alt text](../assests/sort.png)
-
+[Full stack](README.md) ![about_page](client/assests/about.png) ![home_page](client/assests/home.png) ![listing_page](client/assests/listing.png) ![Oath](client/assests/Oauth.png) ![login](client/assests/signIn.png) ![seach_page](client/assests/sort.png)
 
 # React + Vite
 
