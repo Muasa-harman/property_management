@@ -4,8 +4,8 @@ import "swiper/css/bundle";
 import { Navigation } from "swiper/modules";
 import SwiperCore from "swiper";
 import { useParams } from "react-router-dom";
-import { FaBed, FaChair, FaMapMarkerAlt, FaParking, FaShare } from "react-icons/fa";
-import { useSelector } from "react-redux";
+import { FaBed, FaChair, FaParking, } from "react-icons/fa";
+// import { useSelector } from "react-redux";
 import Contact from "../components/Contact";
 
 
@@ -17,7 +17,6 @@ function Listing() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [notFound, setNotFound] = useState(false);
-  const {currentUser} = useSelector((state)=> state.user);
 
   useEffect(() => {
     const fetchListing = async () => {
@@ -29,7 +28,6 @@ function Listing() {
         // if(data.success === false){
         //     setError(true);
         //     setLoading(false);
-        //     return;
         // }
         // setListing(data)
         // setLoading(false)
@@ -60,7 +58,6 @@ function Listing() {
     
   }, [loading, listing]);
 
-  
   return (
     <main>
       {loading && <p className="text-center my-7 text-2xl">Loading...</p>}
@@ -74,7 +71,7 @@ function Listing() {
             listing.imageUrls.map((imageUrl) => (
               <SwiperSlide key={imageUrl}>
                 <div
-                  className="h-[450px]"
+                  className="h-[450px] "
                   style={{
                     background: `url(${imageUrl}) center no-repeat`,
                     backgroundSize: "cover",

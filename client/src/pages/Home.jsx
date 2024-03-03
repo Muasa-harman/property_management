@@ -21,6 +21,7 @@ function Home() {
         const res = await fetch("/api/listing/get?offer=true&limit=4");
         const data = await res.json();
         setOfferListings(data);
+        // console.log(data)
         fetchRentListings();
       } catch (error) {
         console.log(error);
@@ -69,7 +70,7 @@ function Home() {
       </div>
       {/* swiper */}
 
-      <Swiper navigation>
+      <Swiper navigation className="text-black">
         {offerListings &&
           offerListings.length > 0 &&
           offerListings.map((listing) => (
@@ -91,7 +92,7 @@ function Home() {
           <div className="">
             <div className="my-3">
             <h2 className="text-2xl font-semibold text-gray-600">Recent offers</h2>
-            <Link className="text-sm text-blue-800 hover:underline" to={'/search?offer=true'}>Show more offers</Link>
+            <Link className="text-sm text-blue-800 style-none hover:underline" to={'/search?offer=true'}>Show more offers</Link>
             </div>
             <div className="flex flex-wrap gap-4">
               {offerListings.map((listing)=>(
